@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 class Decoder
 {
@@ -22,11 +22,11 @@ class Decoder
 
     static void Main(string[] args)
     {
-        string mensajeCifrado = "GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK.";
-        string mensajeDescifrado = ROT13(mensajeCifrado);
-        
-        Console.WriteLine("El mensaje Cifrado era: " + mensajeCifrado);
-        Console.WriteLine("El mensaje Decifrado ahora es " + mensajeDescifrado);
+        Console.Clear();
+        Console.WriteLine("Que frase en Crifrado ROT-13 quieres decifrar?");
+        string Code = Console.ReadLine();
+        string Decoded = ROT13(Code);
+        Console.Clear();
+        Console.WriteLine("El mensaje Cifrado era: " + Code + "\n\n" + "El mensaje Decifrado ahora es " + Decoded );
     }
-
 }
