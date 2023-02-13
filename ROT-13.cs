@@ -16,7 +16,6 @@ class Decoder
             }
             inputArray[i] = letter;
         }
-
         return new string(inputArray);
     }
 
@@ -27,6 +26,6 @@ class Decoder
         string Code = Console.ReadLine();
         string Decoded = ROT13(Code);
         Console.Clear();
-        Console.WriteLine("El mensaje Cifrado era: " + Code + "\n\n" + "El mensaje Decifrado ahora es " + Decoded );
+        Console.WriteLine("El mensaje Cifrado era: " + Code + "\n\n" + "El mensaje Decifrado ahora es: " + Decoded );
     }
 }
