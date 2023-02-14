@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 class Decoder
 {
@@ -7,8 +7,9 @@ class Decoder
     {
         Console.Clear();
         Console.WriteLine("Que frase en Crifrado ROT-13 quieres decifrar?");
-        char[] Coded = Console.ReadLine();
-        char[] Decoded = Coded;
+        string Coded = Console.ReadLine();
+
+        char[] Decoded = Coded.ToCharArray();
         for (int i = 0; i < Coded.Length; i++)
         {
             char letter = Coded[i];
@@ -16,10 +17,9 @@ class Decoder
             {
                 letter = (char)(((letter - 'A' + 13) % 26) + 'A');
             }
-            Coded[i] = letter;
+            Decoded[i] = letter;
         }
         Console.Clear();
-        Console.WriteLine("El mensaje Cifrado era: " + Decoded + "\n\n" + "El mensaje Decifrado ahora es: " + Coded);
-
+        Console.WriteLine("El mensaje Decifrado ahora es: " + new string(Decoded));
     }
 }
