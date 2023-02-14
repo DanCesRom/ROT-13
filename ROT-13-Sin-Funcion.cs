@@ -20,6 +20,6 @@ class Decoder
             Decoded[i] = letter;
         }
         Console.Clear();
-        Console.WriteLine("El mensaje Decifrado ahora es: " + new string(Decoded));
+        Console.WriteLine("El Mendaje a Decifrar es: " + Coded + "\n\n" + "El mensaje Decifrado ahora es: " + new string(Decoded));
     }
 }
